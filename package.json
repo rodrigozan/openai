@@ -1,7 +1,7 @@
 {
-  "name": "react",
+  "name": "griots-openai",
   "version": "1.0.0",
-  "description": "React example starter project",
+  "description": "An application that queries the OpenAI API",
   "keywords": [
     "react",
     "starter"
