@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import Button from "./UI/Button";
+
 const FormSection = ({ generateResponse }) => {
   const [newQuestion, setNewQuestion] = useState("");
 
@@ -12,12 +14,7 @@ const FormSection = ({ generateResponse }) => {
         value={newQuestion}
         onChange={(e) => setNewQuestion(e.target.value)}
       ></textarea>
-      <button
-        className="btn btn-success mt-4"
-        onClick={() => generateResponse(newQuestion, setNewQuestion)}
-      >
-        Generate Response 🤖
-      </button>
+      <Button onClick={() => generateResponse(newQuestion, setNewQuestion)} class="btn btn-success mt-4" text="Generate Response 🤖" />
     </div>
   );
 };
