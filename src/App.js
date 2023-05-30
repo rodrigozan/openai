@@ -3,9 +3,10 @@ import { Configuration, OpenAIApi } from "openai";
 
 import FormSection from "./components/FormSection";
 import AnswerSection from "./components/AnswerSection";
+import IntroductionText from "./components/IntroductionText";
 
 const App = () => {
-  const api_key = "";
+  const api_key = "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";
 
   const configuration = new Configuration({
     apiKey: api_key,
@@ -17,7 +18,7 @@ const App = () => {
 
   const generateResponse = async (newQuestion, setNewQuestion) => {
     let options = {
-      model: "text-davinci-003",
+      model: "gpt-4",
       temperature: 0,
       max_tokens: 1000,
       top_p: 1,
@@ -47,13 +48,7 @@ const App = () => {
 
   return (
     <div className="container">
-      <div className="header-section">
-        <h1>Griot AI Writer 🤖</h1>
-        <p>
-          An application that queries the
-          <a href="https://openai.com/"> OpenAI API</a>
-        </p>
-      </div>
+      <IntroductionText />
 
       <FormSection generateResponse={generateResponse} />
 
