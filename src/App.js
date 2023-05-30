@@ -6,7 +6,7 @@ import AnswerSection from "./components/AnswerSection";
 import IntroductionText from "./components/IntroductionText";
 
 const App = () => {
-  const api_key = "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";
+  const api_key = "";
 
   const configuration = new Configuration({
     apiKey: api_key,
